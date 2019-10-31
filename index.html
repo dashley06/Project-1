@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <title>In the Loop</title>
+</head>
+
+<body>          
+        <div class="section grey">
+                <div class="row container">
+                    <div class= "col s12">
+                        <h1 class="header">In the Loop</h1>
+                        <h4 class="headerSmall">The app that allows you to discover Atlanta at a moment's notice</h4>
+                    </div>
+
+                </div>
+         </div>
+    
+        <div class="parallax-container">
+                <div class="parallax"><img src="assets/images/Atlanta_Skyline_from_Buckhead.jpg"></div>
+        </div>
+
+    <div class="section grey">
+        <div class="row container">
+            <div class= "col s12">
+                <div class="card-panel center"id="search-card">
+                    <div class= "row headerSmall">Search for any type of event that you would like to attend this week!</div>
+                    <div class="input-field">
+                    <input type="text" id="search-event"></input>
+                        <label for="search-event" class="blue-text text-darken-2">What would you like to do?</label>
+                    </div>     
+                </div>
+            </div>
+    </div>
+
+        <div class="input-field center">
+                <button class="btn blue indigo darken-2" id="search-button">Search</button>
+        </div>
+    </div>    
+    
+    <div class="parallax-container">
+            <div class="parallax"><img src="assets/images/atlantaart.jpg"></div>
+    </div>
+
+<div class="tableHead col s12 m6 l8">
+        <h4 class="headerSmall center" id="headerSmall">5 Day Atlanta Weather Forecast</h4>
+       <table class="results center responsive-table section grey ">
+            <thead>
+             <th><h5>Date</h5></th>
+             <th><h5>Temperature</h5></th>
+             <th><h5>Description</h5></th>
+             <th><h5>Humidity</h5></th>
+             <th><h5> </h5></th>
+           </thead>
+                <tbody id="dynamicTable"></tbody>
+        </table>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="results-card"></div>
+    </div>
+</div>
+
+    <!-- <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/battery.jpg"></div>
+    </div> -->
+    <br>
+    <h4 class="headerSmall center">Click the links below to check out a few of Atlanta's most popular attractions</h4>
+    <br>
+    <br>
+    <br>
+    <div class="carousel carousel-slider">
+                <a class="carousel-item" id="falcons" href="https://www.atlantafalcons.com/schedule/"
+                    target="_blank"><img src="assets/images/falcons-logo.jpeg"></a>
+                    
+                <a class="carousel-item" id="braves" href="https://batteryatl.com/events-cal/" target="_blank"><img
+                        src="assets/images/battery.jpg"></a>
+            
+                <a class="carousel-item" id="fox" href="https://www.foxtheatre.org/events" target="_blank"><img
+                        src="assets/images/fox-logo.png"></a>
+               
+                <a class="carousel-item" id="symphony"
+                    href="https://www.atlantasymphony.org/ConcertsAndTickets/Calendar" target="_blank"><img
+                        src="assets/images/aso-logo.png"></a>
+               
+                <a class="carousel-item" id="verizon" href="https://www.livenation.com/venues/14312/ameris-bank-amphitheatre" target="_blank"><img
+                        src="assets/images/new_verizon_logo_small-1484149321-8068.jpg"></a>
+    </div>
+
+            <footer class="blue darken-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12" id="footer-text">
+                            <p class="copyright">© 2019 Copyright CCDG Enterprise</p>
+                        </div>
+                    </div>
+            </footer>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+body {
+    background-color:rgb(170, 167, 167); 
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.parallax-container {
+    height: 320px;
+  }
+/* .page-flexbox-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+} */
+
+p {
+    font-size: 18px;
+}
+
+
+.header {
+    color: #220566;
+    text-shadow: 1.5px 1.5px gray;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.headerSmall {
+    color: #220566;
+    text-shadow: 1.5px 1.5px gray;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    height: 30px;
+    background-color: #f44336;
+}
+
+#footer-text {
+    color: #ffe0b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 12px;
+    display: flex;
+}
+
+.card {
+    position: relative;
+    padding: 0;
+    margin: 10px 0;
+    page-break-inside: avoid; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap:flex;
+}
+
+.event-info {
+    position: relative;
+    align-items: center;
+    padding: 2px;
+    margin: 10px
+}
+
+/* .map {
+    padding: 10px 0;
+    position: absolute; */
+
+
+.results-card {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.row .input-field input:focus {
+    border-bottom: 0.5px solid black !important;
+    box-shadow: 0 0.5px 0 0 black !important;
+  }
+
+  button {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .carousel .carousel-item {
+      width:400px !important;;
+      height:150px !important;
+  }
+
+  #search-button {
+      color: #fcfbfa;
+  }
+
+  tr:hover {
+      background-color: #da93d4;
+}
+
+  table, th, td {
+    border: 1px solid whitesmoke;
+    text-align: center;
+    padding: 10px;
+  }
+
+  table{
+      background-color: rgb(181, 201, 238);
+      width: 90%;
+      height:50%;
+      margin: 40px auto;   
+  
+
+  }
