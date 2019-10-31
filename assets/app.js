@@ -147,7 +147,7 @@ $(document).ready(function () {
               return (`<img src="assets/images/sun.jpg" alt="sun" width="40" height="40">`);
             } else if (formatWordsUpper.includes("RAIN") === true) {
               return (`<img src="assets/images/rain.jpg" alt="rain" width="40" height="40">`);
-            } else if (temp <= "65") {
+            } else if (temp <= "50") {
               return (`<img src="assets/images/frost.jpg" alt="frost" width="40" height="40">`);
             } else if (formatWordsUpper.includes("CLOUDS") === true) {
               return (`<img src="assets/images/clouds.jpg" alt="clouds" width="40" height="40">`);
