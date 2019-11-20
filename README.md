@@ -1,17 +1,17 @@
-# Can You Stand the Rain? (Project-1)
+GA Tech Full-Stack Coding Bootcamp Project-1
 
 Title: In the Loop
 
 Team Members: Ashley Clark, Dan Gallagher, Ed Dean, Melissa Chiang
 
-APIs to be Used: OpenWeather, Google maps, Stubhub
+APIs to be Used: OpenWeather, Stubhub
 
 Rough Breakdown of Tasks:
 
     *Create user input field for users to search for the events
     *API call to take users' input through Stubhub
     *Pull the event information as a JSON response when submit button is clicked
-    *Once the button is clicked, call Google maps, Stubhub, and OpenWeather API to show information
+    *Once the button is clicked, call Stubhub and OpenWeather API to show information
     *Display location and weather
     *Display gifs of the even
     *Put links to direct users to alternatives events and websites
@@ -32,10 +32,12 @@ As a user, I want to see traffic and location information.
 
 
 
-API's Used: 
+Technologies Used: 
 1. Open Weather 
-2. Google Maps
-3. Stubhub
+2. Stubhub
+3. Firebase
+4. Javascript/JQuery
+5. Materialize
 
 
 

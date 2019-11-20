@@ -25,7 +25,7 @@ $(document).ready(function () {
     $(".results").hide();
     $(".tableHead").hide();
    
-  
+  //on-click function for API calls
     $("#search-button").on("click", function (event) {
       event.preventDefault();
       $(".results").show();
@@ -38,24 +38,24 @@ $(document).ready(function () {
         search: search,
   
       });
-  
+
+  //moment function for determining current time and formatting
       var currentDate = new Date();
       var endDate = moment(currentDate).add(5, 'days').format("YYYY-MM-DD");
       var startDate = moment(currentDate).format("YYYY-MM-DD");
-      // console.log(startDate)
-      //console.log(endDate)
+  
+  //API ajax call for StubHub
       var queryURl = "https://api.stubhub.com/sellers/search/events/v3?q=" + search + "&dateLocal=" + startDate + "TO" + endDate + "&city=Atlanta";
       $.ajax({
           method: "GET",
           url: queryURl,
           headers: {
-            Authorization: "Bearer A0cvfZsGTDdB1nyqgQ68SpoGdOWC"
+            Authorization: config.Auth_Key
           }
         })
         .then(function (response) {
           var results = response;
-          // console.log(results)
-          // console.log(results.events.length)
+         
           $(".results-card").empty();
           for (var i = 0; i < results.events.length; i++) {
             var eventName = results.events[i].name;
@@ -90,12 +90,6 @@ $(document).ready(function () {
                         <p><strong>Date/Time: </strong>${prettyDate}</p>
                       </div>
                     </div>
-                      //  <div class="map">
-                      //  <iframe width="350" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCynWVZa4c50o3U0LXoKlAGnh2bHcfQMUo
-                      //    &q=${repSpace}" allowfullscreen>pu
-                      //   </iframe>
-                      //  </div>
-                  
               </div>
             </div>
       
@@ -108,10 +102,10 @@ $(document).ready(function () {
   
     });
   
-    //API call for weather//----------------------------------------------------------------------------------------------------------
+    //API call for weather
   
     // This is the API key for Open Weather
-    var APIKey = "b7b907c1b8d2d7c447d6c40de9d6cb86";
+    var APIKey = config.API_Key;
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=atlanta,us&mode=json&units=imperial&APPID=" + APIKey
   
     // AJAX call to the OpenWeatherMap API
@@ -141,7 +135,7 @@ $(document).ready(function () {
         </tr>
       
      `
-  
+  //populating icons to display in table for weather
           function picWeather() {
             if (temp >= "70" && formatWordsUpper.includes("CLOUDS") === false && formatWordsUpper.includes("RAIN") === false) {
               return (`<img src="assets/images/sun.jpg" alt="sun" width="40" height="40">`);
