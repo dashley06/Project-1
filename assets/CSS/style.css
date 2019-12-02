@@ -21,14 +21,16 @@ p {
 .header {
     color: #220566;
     text-shadow: 1.5px 1.5px gray;
-    font-size: 60px;
+    font-size: 80px;
+    font-family: 'Spicy Rice', cursive;
     font-weight: bold;
 }
 
 .headerSmall {
     color: #220566;
     text-shadow: 1.5px 1.5px gray;
-    font-size: 40px;
+    font-size: 25px;
+    font-family: 'Spicy Rice', cursive;
     font-weight: bold;
 }
 
@@ -55,7 +57,7 @@ footer p {
     padding: 0;
     margin: 10px 0;
     page-break-inside: avoid; 
-    display: flex;
+    
     flex-direction: column;
     flex-wrap:flex;
 }
@@ -66,11 +68,6 @@ footer p {
     padding: 2px;
     margin: 10px
 }
-
-/* .map {
-    padding: 10px 0;
-    position: absolute; */
-
 
 .results-card {
     line-height: 30px;

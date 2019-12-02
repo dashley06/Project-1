@@ -6,15 +6,13 @@ Team Members: Ashley Clark, Dan Gallagher, Ed Dean, Melissa Chiang
 
 APIs to be Used: OpenWeather, Stubhub
 
-Rough Breakdown of Tasks:
+Breakdown of Tasks:
 
     *Create user input field for users to search for the events
     *API call to take users' input through Stubhub
     *Pull the event information as a JSON response when submit button is clicked
     *Once the button is clicked, call Stubhub and OpenWeather API to show information
-    *Display location and weather
-    *Display gifs of the even
-    *Put links to direct users to alternatives events and websites
+    *Display location and weather information
 
 
 Project Description:

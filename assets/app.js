@@ -1,9 +1,8 @@
-$(document).ready(function () {
-
-    $(document).ready(function(){
+$(document).ready(function() {
       $('.parallax').parallax();
       $('.carousel').carousel();
-    });
+      $('.modal-trigger').modal();
+   
   
     var firebaseConfig = {
       apiKey: "AIzaSyCXn_4E9valZxUZhJr98_P_lVmT3AuHFz4",
@@ -55,8 +54,25 @@ $(document).ready(function () {
         })
         .then(function (response) {
           var results = response;
-         
+        
+          if (results.events.length === 0 || results.events.length === null){
+                alert("There are no events on StubHub this week that match your search")
+            }
+        //Modal if there are no events found by Stubhub
+        // <div id="modal1" class="modal">
+        //     <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+        //         <div class="modal-content">
+        //           <h4>ERROR</h4>
+        //           <p>There are no events on StubHub this week that match your search.</p>
+        //         </div>
+        //         <div class="modal-footer">
+        //           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        //         </div>
+        // </div>
+        //     }
+
           $(".results-card").empty();
+
           for (var i = 0; i < results.events.length; i++) {
             var eventName = results.events[i].name;
             var eventVenue = results.events[i].venue.name;
@@ -64,19 +80,14 @@ $(document).ready(function () {
             var maxTicketPrice = results.events[i].ticketInfo.maxListPrice;
             var eventDate = results.events[i].eventDateLocal;
             var prettyDate = moment(eventDate).format('MMMM Do YYYY, h:mm a');
-            console.log(eventName)
-            console.log(eventVenue)
-            console.log(minTicketPrice)
-            console.log(maxTicketPrice)
-            console.log(prettyDate)
   
             var repSpace = eventVenue.split(" ").join("+");
-            console.log(repSpace)
+      
   
             var searchResults = `
           
             <div class="col s8 m4">
-              <div class="card">
+              <div class="card large">
                     <div class="card-image">
                       <img src="assets/images/Atlanta_Skyline_from_Buckhead.jpg">  
                       </div>
@@ -97,7 +108,8 @@ $(document).ready(function () {
   
             $(".results-card").append(searchResults);
   
-          }
+            }
+          
         })
   
     });
