@@ -46,12 +46,12 @@ $(document).ready(function() {
   //API ajax call for StubHub
       var queryURl = "https://api.stubhub.com/sellers/search/events/v3?q=" + search + "&dateLocal=" + startDate + "TO" + endDate + "&city=Atlanta";
       $.ajax({
-          method: "GET",
-          url: queryURl,
-          headers: {
-            Authorization: config.Auth_Key
-          }
-        })
+        method: "GET",
+        url: queryURl,
+        headers: {
+          Authorization: "Bearer A0cvfZsGTDdB1nyqgQ68SpoGdOWC"
+        }
+      })
         .then(function (response) {
           var results = response;
         
@@ -117,7 +117,7 @@ $(document).ready(function() {
     //API call for weather
   
     // This is the API key for Open Weather
-    var APIKey = config.API_Key;
+    var APIKey = "b7b907c1b8d2d7c447d6c40de9d6cb86";
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=atlanta,us&mode=json&units=imperial&APPID=" + APIKey
   
     // AJAX call to the OpenWeatherMap API
