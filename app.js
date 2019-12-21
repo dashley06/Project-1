@@ -58,18 +58,7 @@ $(document).ready(function() {
           if (results.events.length === 0 || results.events.length === null){
                 alert("There are no events on StubHub this week that match your search")
             }
-        //Modal if there are no events found by Stubhub
-        // <div id="modal1" class="modal">
-        //     <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-        //         <div class="modal-content">
-        //           <h4>ERROR</h4>
-        //           <p>There are no events on StubHub this week that match your search.</p>
-        //         </div>
-        //         <div class="modal-footer">
-        //           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-        //         </div>
-        // </div>
-        //     }
+   
 
           $(".results-card").empty();
 
