@@ -2,8 +2,8 @@ $(document).ready(function() {
       $('.parallax').parallax();
       $('.carousel').carousel();
       $('.modal-trigger').modal();
+      $('.modal').modal();
    
-  
     var firebaseConfig = {
       apiKey: "AIzaSyCXn_4E9valZxUZhJr98_P_lVmT3AuHFz4",
       authDomain: "project-1-7fa91.firebaseapp.com",
@@ -33,7 +33,6 @@ $(document).ready(function() {
       search = $("#search-event").val().trim();
   
       database.ref().push({
-  
         search: search,
   
       });
@@ -55,11 +54,6 @@ $(document).ready(function() {
         .then(function (response) {
           var results = response;
         
-          if (results.events.length === 0 || results.events.length === null){
-                alert("There are no events on StubHub this week that match your search")
-            }
-   
-
           $(".results-card").empty();
 
           for (var i = 0; i < results.events.length; i++) {
@@ -69,12 +63,9 @@ $(document).ready(function() {
             var maxTicketPrice = results.events[i].ticketInfo.maxListPrice;
             var eventDate = results.events[i].eventDateLocal;
             var prettyDate = moment(eventDate).format('MMMM Do YYYY, h:mm a');
-  
             var repSpace = eventVenue.split(" ").join("+");
       
-  
             var searchResults = `
-          
             <div class="col s8 m4">
               <div class="card large">
                     <div class="card-image">
@@ -91,14 +82,14 @@ $(document).ready(function() {
                       </div>
                     </div>
               </div>
-            </div>
-      
-            `;
+            </div> `;
   
             $(".results-card").append(searchResults);
-  
-            }
-          
+        }
+
+            if (results.events.length === 0 || results.events.length === null){
+             alert("There are no results that match your query on Stubhub. Please search again.");
+          }
         })
   
     });
